@@ -1,0 +1,29 @@
+Algorithm pb2_sol1
+Var
+    sum:INTEGER:=0;
+    i:INTEGER:=0;
+    j:INTEGER:=0;
+    arr1 : ARRAY_OF INTEGER;
+    arr2 : ARRAY_OF INTEGER;
+
+Begin
+   	 Writeln("ecrire elemnts of array1");
+    For i From 0 to (arr1.length-1)  STEP 1  Do
+        readln(arr1[i]);
+    END_FOR
+
+   	Writeln("ecrire elemnts of array2");
+     For j From 0 to (arr2.length-1) STEP 1  Do
+        readln(arr2[j]);
+    END_FOR
+
+    For i From 0 to (arr1.length-1) STEP 1 Do
+         For j From 0 to (arr1.length-1) STEP 1  Do
+            If (arr1[i]:=arr2[j]) Then
+            	sum:=sum+arr1[i]*2;
+            END_IF
+        END_FOR
+    END_FOR
+    
+    Writeln("Sum of overlapping elements: ",sum);
+END.

@@ -1,0 +1,37 @@
+Algorithm Pb1 Sol1
+Var
+	Sum:Integer:=0;
+	i,j,k:integer;
+	arr1:Array_Of Integer;
+	arr2:Array_Of Integer;
+	
+
+Begin
+
+	Writeln("ecrire elemnts of array1");
+	For i From 0 to (arr1.length-1) STEP 1  Do
+		Readln(arr1[i]);
+	End_For	
+	
+	Writeln("ecrire elemnts of array2");
+	For j From 0 to (arr2.length-1) STEP 1  Do
+		Readln(arr2[i]);
+	End_For	
+
+	
+	For i From 0 to (arr1.length-1) STEP 1  Do
+		K:=0;
+		For j From 0 to (arr2.length-1) STEP 1  Do
+			If(arr1[i] := arr2[j])Then
+			   Remove arr2[j];
+			   j:=--;
+			   k:=1;
+			End_If
+		End_For
+		  If(k:=0) Then
+			sum:=sum+arr1[i];
+		  End_If 
+	End_For
+	sum:=sum+arr2[j];
+	Writeln("sum of all distincts elemnts:",sum);
+End.
